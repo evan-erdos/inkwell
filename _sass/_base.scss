@@ -1,0 +1,381 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+a.site-title {
+    font-size: 4em;
+    letter-spacing: 0.05em;
+    font-family: $header-font-family;
+}
+
+/* temp * /
+
+@page {
+    size: auto;   /* auto is the initial value * /
+    /* this affects the margin in the printer settings * /
+    margin: 25mm 25mm 25mm 25mm;
+}
+
+body {
+    margin: 25mm 25mm 25mm 25mm;
+}
+
+h2 {
+    page-break-before: always;
+    page-break-after: avoid;
+}
+
+
+/* end temp */
+
+h1,h2,h3 { /* p */
+    page-break-after: avoid;
+}
+
+
+
+section,p {
+    -webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    -ms-column-break-inside:avoid;
+    column-break-inside:avoid;
+}
+
+
+
+.beat {
+    font-size: 75%;
+    vertical-align: 2px;
+    text-decoration: none;
+}
+
+.screenplay {
+    font-size: 16px;
+    font-family: courier;
+    margin-left: 1em;
+    padding: 1em 1em 1em 1em;
+    margin-bottom: 1em;
+    border: 1px solid $grey-color-light;
+    border-radius: 4px;
+    background-color: #fff;
+
+    p {
+        margin: 0;
+        orphans: 2;
+        widows: 2;
+    }
+
+    dl { page-break-inside:avoid; }
+    dt, h2, h5 { page-break-after: avoid; }
+    dd.parenthetical {
+        orphans: 3;
+        widows: 3;
+        page-break-before: avoid;
+        page-break-after: avoid;
+    }
+    dd { page-break-before:avoid; }
+    div.page-break { page-break-after:always; }
+    h3 { page-break-before: avoid; }
+
+
+    /*Character Names*/
+    dt {
+        font-weight:normal;
+        margin-top:1em;
+        margin-left:2in;
+        width:4in;
+    }
+
+    /*Parentheticals*/
+    dd.parenthetical {
+        margin-left:1.6in;
+        text-indent:-.12in;
+        width: 2in;
+    }
+
+    /*Dialogue*/
+    dd {
+        margin:0;
+        margin-left: 1in;
+        width: 3.5in;
+        line-height: inherit;
+        white-space: pre-wrap;
+    }
+
+    /* Dual-Dialogue-blocks */
+    dl {clear:both;}
+
+    dl.dual { width:2.9in; clear:none; }
+
+    dl.dual dt, dl.dual dd { margin-left:0; width:100%;}
+
+    dl.dual.first { float:left; margin-top:-12pt; }
+
+    dl.dual.second {
+        margin-right:0;
+        margin-left:auto;
+    }
+
+    dl.dual dt { text-align:center; }
+
+    dl.dual dd.parenthetical {
+        width:2.1in;
+        margin-left:.32in;
+    }
+
+    /* Lyrics */
+    span.lyric { font-style: italic; }
+
+    span.lyric i { font-style: normal; }
+
+
+    /* Sluglines and Transitions */
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: normal;
+        font-size: 12pt;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-transform:uppercase;
+    }
+
+    /* Full Sluglines */
+    h2 {
+        width: inherit;
+        margin-top: 1em;
+        margin-bottom: 12pt;
+        margin-left: 0;
+        text-decoration: none;
+    }
+
+    /* Right Transitions */
+    h3 {
+        margin-left: 4in;
+        width: 2in;
+    }
+
+    /* Left Transitions */
+    h4 { }
+
+    /* Goldman Sluglines */
+    h5 {
+        margin-top: 1em;
+        /* font-weight: bold; */
+        text-decoration: none;
+    }
+
+    span.underline {
+        text-decoration:underline;
+        }
+        .comment {
+        display:none
+    }
+}
+
+
+/**
+ * Basic styling
+ */
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    //background-color: $background-color;
+    background: $background-image;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+h1 {
+    font-family: $header-font-family;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 1em;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 16px;
+    border: 1px solid $grey-color-light;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: hidden;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <header class="site-header">
+      <div class="wrapper">
+        <a class="site-title" href="{{site.baseurl}}/">{{ site.title }}</a>
+        <h2 class="site-title" style="float:right;">{{page.title}}</h2>
+      </div>
+    </header>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="wrapper">
+        <h2 class="footer-heading">{{ site.title }}</h2>
+        <div class="footer-col-wrapper">
+          <div class="footer-col footer-col-1"></div>
+          <div class="footer-col footer-col-2"></div>
+          <div class="footer-col footer-col-3">
+            <ul>
+              <li>Act I: Ben Scott</li>
+              <li>Act II: Christian Murphy</li>
+              <li>Act III: Vivek Sangubhotla</li>
+              <li>Act IV: Naomi Burgess</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

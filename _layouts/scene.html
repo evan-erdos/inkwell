@@ -1,0 +1,14 @@
+---
+layout: story
+---
+
+<article class="scene" itemprop="articleBody">
+  <header class="scene-header">
+    <h1 class="scene-title">
+    {% if page.scene %} Scene {{ page.scene | plus:1 }} : {% endif %}<i>{{ page.title }}</i></h1>
+  </header>
+  <div class="scene-content">
+    {{ content }}
+  </div>
+  {% include inkwell.html %}
+</article>

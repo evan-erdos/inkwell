@@ -1,0 +1,12 @@
+
+title: "Inkwell"
+email: bescott@andrew.cmu.edu
+url: "bescott.org/"
+baseurl: "/inkwell"
+permalink: /:title/
+description: >
+  A little script for embedding Screenplays in websites,
+  using the Fountain markup language.
+
+gems:
+- jekyll-coffeescript
