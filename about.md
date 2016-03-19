@@ -4,16 +4,8 @@ title: About
 permalink: /about/
 ---
 
-
-Inkwell is a little script which embeds screenplays in websites via the Fountain markup language.
-
-An example of Inkwell in action:
-
-{% include inkwell.html source="example" %}
-
-
-Fountain is a rather simple syntax (perhaps more appropriately, mark*down* than markup)
-which transforms plain text into screenplay format.
+Inkwell renders screenplays from the Fountain markup language,
+which is a rather simple syntax that looks something like this:
 
 ~~~text
 
@@ -39,30 +31,37 @@ That's right!
 
 ~~~
 
-This is what a plain Fountain screenplay looks like.
-It can be embedded in a webpage in two ways.
+That's a scene header, an action slug, and a few lines of dialogue.
 
-The first way is to host a complete Fountain screenplay somewhere,
-and then have `inkwell-loader.coffee` load it into the appropriate `div`,
-such that `inkwell.coffee` can interpret it.
+Inkwell currently has three modes:
 
-In your source file, it would look like this:
+- external mode, for putting whole files into the page
+- snippet mode, for writing short scenes in the page source
+- page mode, which formats an entire page as a screenplay
 
+
+External mode looks like this in your page source:
 {% raw %}
-~~~text
+~~~html
 
-This is some other text in my document!
+<p>
+  I'm some paragraph! Wow look! A screenplay!
+</p>
 
 {% include inkwell.html source="example" %}
 
-Wow, look, a screenplay embedded right above this text!
+<div>
+  I'm some div! Wow look! A screenplay above me!
+</div>
 
 ~~~
+
 {% endraw %}
 
+
 The above include will automatically look in `bescott.org/scenes/example.fountain`,
-because this page's base URL is my website.
-On your Jekyll site, it will be `your_url.com/scenes/example.fountain`,
+because you're on my website, and that's my URL.
+On your Jekyll site, it will be `yoururl.com/scenes/example.fountain`,
 or wherever else you want to put it.
 To use some external URL, pass the full URL in, like this:
 
@@ -80,8 +79,11 @@ Wow, look, a screenplay embedded right above this text!
 
 
 
-The second approach can be done directly in the page,
-using liquid template includes, like this:
+Snippet mode allows you to write directly in the page source.
+It uses liquid templates to put all your prose in a particular `div`,
+which Inkwell then reads from and transforms into screenplay format.
+
+Snippet mode looks something like this:
 
 {% raw %}
 ~~~text
@@ -111,7 +113,35 @@ This way, you don't have to worry about hosting a file somewhere,
 Inkwell just interprets what you write.
 
 
+Finally, page mode is used as a layout in the YAML Frontmatter of your page.
+It transforms the entire page into a plain white and printable screenplay.
+
+It looks like this:
 
 
+~~~text
+---
+layout: inkwell
+title: My Scene
+---
+
+INT. WEBPAGE EXAMPLE, DAY
+
+An entire screenplay sits inside a webpage.
+All of a sudden, somebody reads it.
+
+READER
+This is pretty interesting!
+
+BEN SCOTT
+Yeah, it sure is!
+
+~~~
+
+
+Without further ado, here's the example scene, included in the page:
+
+
+{% include inkwell.html source="example" %}
 
 

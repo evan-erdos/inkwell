@@ -2,7 +2,7 @@
 layout: page
 ---
 
-Inkwell is a little script which embeds screenplays in websites via the Fountain markup language.
+Inkwell is a little script which can embed screenplays in websites via the Fountain markup language.
 
 
 An example of Inkwell in action:
