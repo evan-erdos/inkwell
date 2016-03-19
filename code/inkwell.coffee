@@ -19,8 +19,8 @@ url_regex = /^((ftp|https?):\/\/)?([\d\w\.-]+)\.([\w\.]{2,6})([\/\w \.-]*)*\/?$/
 
 
 ### DOM ###
-#site = "http://bescott.org" # domain name
-site = "http://localhost:4000" # domain name
+site = "http://bescott.org" # domain name
+#site = "http://localhost:4000" # domain name
 baseurl = "/inkwell" # subdomain
 
 
