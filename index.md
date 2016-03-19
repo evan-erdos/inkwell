@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Inkwell
+layout: page
 ---
 
 Inkwell is a little script which embeds screenplays in websites via the Fountain markup language.
