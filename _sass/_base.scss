@@ -87,6 +87,9 @@ section,p {
     border: 1px solid $grey-color-light;
     border-radius: 4px;
     background-color: #fff;
+    -webkit-box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
 
     p {
         margin: 0;
