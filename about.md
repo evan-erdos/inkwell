@@ -90,22 +90,12 @@ Below this text on my page, there's a screenplay snippet!
 
 {% include begin-inkwell.html %}
 
-INT. INKWELL EXAMPLE, DAY
+INT. SNIPPET, DAY
 
-Man, what an action slug we have here.
-Dialogue begins with an all-caps name and something to say,
-and scene headers like the one above start with INT. or EXT.,
-(or with something else, just put a period before the name).
-Anything else is considered an action slug, like this one.
+Wow, what a snippet! This is written directly in the markdown!
 
 READER
-Hey, what about me?
-
-BEN SCOTT
-Oh, hello! You're a character, aren't you?
-
-READER
-Yeah, I sure am! And this is dialogue, huh?
+It is?
 
 BEN SCOTT
 That's right!
