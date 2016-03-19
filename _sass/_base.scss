@@ -8,13 +8,35 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+
+/* fancy underline for site title */
+
+a.site-title {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    width: 0px;
+    transition: 0.1s;
+    white-space: nowrap;
+    height: 50px;
+    font-size: 4em;
+    letter-spacing: 0.05em;
+    font-family: $header-font-family;
+}
+
+a.site-title:hover {
+    text-decoration: none;
+    border-bottom: 2px solid $grey-color-dark;
+    width: 3em;
+}
+
+/* temp * /
 a.site-title {
     font-size: 4em;
     letter-spacing: 0.05em;
     font-family: $header-font-family;
 }
 
-/* temp * /
 
 @page {
     size: auto;   /* auto is the initial value * /
