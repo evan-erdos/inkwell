@@ -17,7 +17,7 @@ An example of Inkwell in action:
 
 Another example, this time with the screenplay written right in the file!
 
-{% include begin-inkwell.html %}
+{% include inkwell-begin.html %}
 
 INT. SNIPPET, DAY
 
@@ -29,7 +29,7 @@ It is?
 BEN SCOTT
 That's right!
 
-{% include end-inkwell.html %}
+{% include inkwell-end.html %}
 
 
 

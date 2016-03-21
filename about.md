@@ -90,7 +90,7 @@ Snippet mode looks something like this:
 
 Below this text on my page, there's a screenplay snippet!
 
-{% include begin-inkwell.html %}
+{% include inkwell-begin.html %}
 
 INT. SNIPPET, DAY
 
@@ -102,7 +102,7 @@ It is?
 BEN SCOTT
 That's right!
 
-{% include end-inkwell.html %}
+{% include inkwell-end.html %}
 
 Wow, it put that stuff right in there, above me!
 
