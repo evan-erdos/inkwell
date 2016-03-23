@@ -87,14 +87,17 @@
       /* ---------- COMMON LAYOUT ---------- */
 
       body {
-      font-family: courier;
-      font-size: 12pt;
-      line-height: 1;
+        font-family: courier;
+        font-size: 12pt;
+        line-height: 1;
+        margin-left: 0.5in;
+        margin-right: 0.5in;
+        margin-top: 0.5in;
+        margin-bottom: 0.5in;
       }
-      #screenplay {
-      width: 6in;
-      margin:0 auto;
-      }
+
+      body.screenplay { width: 6in; }
+
       p.center {
       text-align:center;
       margin-left:0;
@@ -226,11 +229,9 @@
 
     </style>
   </head>
-  <body>
-  <div class="screenplay">
-    <br><br>
+  <body class="screenplay">
+  <div>
     {{ content }}
-    <br><br>
   </div>
   </body>
 </html>

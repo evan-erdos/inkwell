@@ -1,3 +1,11 @@
+---
+layout: inkwell
+title: My Scene
+author: Ben Scott
+date: 2016-03-22
+---
+
+
 INT. INKWELL EXAMPLE, DAY
 
 Man, what an action slug we have here.

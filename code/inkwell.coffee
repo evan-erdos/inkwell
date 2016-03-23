@@ -32,7 +32,7 @@ String::endsWith   ?= (s) -> s=='' || @slice(-s.length)==s
 
 ### `Inkwell`
 #
-# main class for Inkwell screenplay includes
+# main class for full-page Inkwell screenplays
 ###
 class Inkwell
     constructor: ->
@@ -95,7 +95,7 @@ class Inkwell
         p = document.createElement('p')
         p.className = "action"
         for line in lines
-            text = document.createTextNode(line+"\n")
+            text = document.createTextNode("#{line} ")
             p.appendChild(text)
         return p
 
@@ -115,12 +115,15 @@ class Inkwell
                 return @createCharacter(lines)
         else return @createAction(lines)
 
+
     ### `process`
     #
     # creates the appropriate fountain block from the input
     ###
     process: (data) ->
-        data = data.replace(/\n\n+/,"\n\n")
+        return unless data?
+        data = data.replace /<\/?p>/g, "\n"
+        data = data.replace /\n\n+/g, "\n\n"
         paragraphs = data.split "\n\n"
         for paragraph in paragraphs
             lines = paragraph.split "\n"
@@ -149,6 +152,7 @@ class Inkwell
                     @process(data) if error==null
                 reader.readAsText(blob)
         xhr.send()
+
 
     ### `getURL`
     #
